@@ -114,7 +114,7 @@ private fun GatewayStatusCard(state: GatewayState, stats: com.resqteam.app.bluet
                             CircleShape
                         )
                 )
-                Spacer(Modifier.width(8.dp))
+                Spacer(Modifier.size(width = 8.dp, height = 0.dp))
                 Text(
                     if (connected) "GATEWAY CONNECTED" else gatewayStateLabel(state),
                     fontWeight = FontWeight.Bold
@@ -194,7 +194,7 @@ private fun IncidentCard(incident: IncidentEntity, onClick: () -> Unit) {
                         .size(10.dp)
                         .background(severityColor(incident.priority), CircleShape)
                 )
-                Spacer(Modifier.width(6.dp))
+                Spacer(Modifier.size(width = 6.dp, height = 0.dp))
                 Text(
                     EmergencyPriority.fromLevel(incident.priority).label,
                     color = severityColor(incident.priority),
